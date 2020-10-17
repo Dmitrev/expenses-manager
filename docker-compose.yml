@@ -26,7 +26,6 @@ services:
         volumes:
             # Mount point for project files
             - ./src:/var/data/www:cached
-            - node_modules:/var/data/www/node_modules:cached
 
             # mount composer config files to not lose them
             - composer:/root/.composer
