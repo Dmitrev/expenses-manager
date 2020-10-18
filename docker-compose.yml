@@ -45,6 +45,8 @@ services:
         image: mariadb:10.5
         networks:
             - www
+        volumes:
+            - db:/var/lib/mysql
         ports:
         - 33060:3306
         environment:
@@ -55,6 +57,7 @@ services:
 volumes:
   node_modules:
   composer:
+  db:
 
 networks:
     www:
