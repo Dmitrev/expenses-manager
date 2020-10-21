@@ -21,3 +21,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/category', 'App\Http\Controllers\CategoryController@create');
 Route::get('/category', 'App\Http\Controllers\CategoryController@all');
+
+Route::post('/transaction', 'App\Http\Controllers\TransactionController@create');
+Route::get('/transaction', 'App\Http\Controllers\TransactionController@all');
