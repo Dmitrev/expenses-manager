@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 //});
 
 
-Route::post('/category', 'App\Http\Controllers\CategoryController@create');
-Route::get('/category', 'App\Http\Controllers\CategoryController@all');
+Route::post('category', [CategoryController::class, 'create']);
+Route::get('category', [CategoryController::class, 'all']);
 
-Route::post('/transaction', 'App\Http\Controllers\TransactionController@create');
-Route::get('/transaction', 'App\Http\Controllers\TransactionController@all');
+Route::post('transaction', [TransactionController::class, 'create']);
+Route::get('transaction', [TransactionController::class, 'all']);
